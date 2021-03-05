@@ -5,6 +5,14 @@
 - [Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/)
 - [通过例子学 Rust](https://rustwiki.org/zh-CN)
 
+- [rustprimer](https://hardocs.com/d/rustprimer/index.html)
+
+- https://github.com/rust-lang/rust-by-example
+- https://github.com/rust-unofficial/awesome-rust
+- https://github.com/rust-lang/rustlings
+- https://github.com/rustcc/RustPrimer
+
+
 ## windows 下 执行 cargo build 之后 [Rust] Error: linker `link.exe` not found
 https://blog.csdn.net/qq_32524177/article/details/98615641
 
