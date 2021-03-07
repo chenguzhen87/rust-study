@@ -5,7 +5,7 @@
 - [Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/)
 - [通过例子学 Rust](https://rustwiki.org/zh-CN)
 
-- [rustprimer](https://hardocs.com/d/rustprimer/index.html)
+- [rustprimer](https://rustcc.gitbooks.io/rustprimer/content)
 
 - https://github.com/rust-lang/rust-by-example
 - https://github.com/rust-unofficial/awesome-rust

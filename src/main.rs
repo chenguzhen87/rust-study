@@ -552,4 +552,248 @@
 //     );
 // }
 
-fn main() {}
+// fn main() {
+//     let a1 = 5;
+//     let a2: i32 = 5;
+//     assert_eq!(a1, a2);
+//     //let 绑定 整数变量默认类型推断是 i32
+
+//     let b1: u32 = 5;
+//     //assert_eq!(a1, b1);
+//     //去掉上面的注释会报错，因为类型不匹配
+//     //errer: mismatched types
+// }
+
+// fn main() {
+//     // let mut a: f64 = 1.0;
+
+//     // println!("{:?}", a);
+//     // a = 2.0;
+//     // println!("{:?}", a);
+
+//     // let a: f64 = 1.0;
+//     // println!("{:?}", a);
+
+//     // 报错
+//     // let mut a: f64 = 1.0;
+//     // a = 2.0;
+//     // println!("{:?}", a);
+// }
+
+// fn main() {
+//     let (a, mut b): (bool, bool) = (true, false);
+//     println!("a = {:?}, b = {:?}", a, b);
+//     //a 不可变绑定
+//     //a = false;
+//     //b 可变绑定
+//     b = true;
+//     assert_eq!(a, b);
+// }
+
+// fn main() {
+//     let mut array = [0; 3];
+
+//     array[1] = 1;
+//     array[2] = 2;
+
+//     assert_eq!([1, 2], &array[1..]);
+
+//     // This loop prints: 0 1 2
+//     for x in &array {
+//         println!("{} ", x);
+//     }
+// }
+
+// fn main() {
+//     //创建空Vec
+//     let v: Vec<i32> = Vec::new();
+//     //使用宏创建空Vec
+//     let v: Vec<i32> = vec![];
+//     //创建包含5个元素的Vec
+//     let v = vec![1, 2, 3, 4, 5];
+//     //创建十个零
+//     let v = vec![0; 10];
+//     //创建可变的Vec，并压入元素3
+//     let mut v = vec![1, 2];
+//     v.push(3);
+//     //创建拥有两个元素的Vec，并弹出一个元素
+//     let mut v = vec![1, 2];
+//     let two = v.pop();
+//     //创建包含三个元素的可变Vec，并索引一个值和修改一个值
+//     let mut v = vec![1, 2, 3];
+//     let three = v[2];
+//     v[1] = v[1] + 5;
+// }
+
+// fn main() {
+//     // 字符串字面值
+//     //let hello = "Hello, world!";
+//     // 附带显式类型标识
+//     let hello: &'static str = "Hello, world!";
+//     println!("{}", hello)
+// }
+
+// fn main() {
+//     // 创建一个空的字符串
+//     //let mut s = String::new();
+//     // 从 `&str` 类型转化成 `String` 类型
+//     let mut hello = String::from("Hello, ");
+//     // 压入字符和压入字符串切片
+//     hello.push('w');
+//     hello.push_str("orld!");
+
+//     // 弹出字符。
+//     let mut s = String::from("foo");
+//     assert_eq!(s.pop(), Some('o'));
+//     assert_eq!(s.pop(), Some('o'));
+//     assert_eq!(s.pop(), Some('f'));
+//     assert_eq!(s.pop(), None);
+// }
+
+// fn main() {
+//     // structs
+//     struct Point {
+//         x: i32,
+//         y: i32,
+//     }
+//     let point = Point { x: 0, y: 0 };
+//     // tuple structs
+//     struct Color(u8, u8, u8);
+//     let android_green = Color(0xa4, 0xc6, 0x39);
+//     let Color(red, green, blue) = android_green;
+// }
+
+// fn main() {
+//     // // structs
+//     // struct Point {
+//     //     x: i32,
+//     //     y: i32,
+//     // }
+//     // let point = Point { x: 0, y: 0 };
+
+//     // // tuple structs
+//     // struct Color(u8, u8, u8);
+//     // let android_green = Color(0xa4, 0xc6, 0x39);
+//     // let Color(red, green, blue) = android_green;
+
+//     // // A tuple struct’s constructors can be used as functions.
+//     // struct Digit(i32);
+//     // let v = vec![0, 1, 2];
+//     // let d: Vec<Digit> = v.into_iter().map(Digit).collect();
+
+//     // // newtype: a tuple struct with only one element
+//     // struct Inches(i32);
+//     // let length = Inches(10);
+//     // let Inches(integer_length) = length;
+
+//     // // unit-like structs
+//     // struct EmptyStruct;
+//     // let empty = EmptyStruct;
+
+//     // #[derive(Default)]
+//     // struct Point3d {
+//     //     x: i32,
+//     //     y: i32,
+//     //     z: i32,
+//     // }
+
+//     // let origin = Point3d::default();
+//     // let point = Point3d { y: 1, ..origin };
+//     // let Point3d { x: x0, y: y0, .. } = point;
+// }
+
+// fn main() {
+//     // let x = 5;
+//     // let mut y = 5;
+
+//     // match x {
+//     //     // the `r` inside the match has the type `&i32`
+//     //     ref r => println!("Got a reference to {}", r),
+//     // }
+
+//     // match y {
+//     //     // the `mr` inside the match has the type `&i32` and is mutable
+//     //     ref mut mr => println!("Got a mutable reference to {}", mr),
+//     // }
+
+//     // let pair = (0, -2);
+
+//     // match pair {
+//     //     (0, y) => println!("x is `0` and `y` is `{:?}`", y),
+//     //     (x, 0) => println!("`x` is `{:?}` and y is `0`", x),
+//     //     _ => println!("It doesn't matter what they are"),
+//     // }
+
+//     // struct Point {
+//     //     x: i32,
+//     //     y: i32,
+//     // }
+//     // let origin = Point { x: 0, y: 0 };
+//     // match origin {
+//     //     Point { x, .. } => println!("x is {}", x),
+//     // }
+
+//     // enum OptionalInt {
+//     //     Value(i32),
+//     //     Missing,
+//     // }
+//     // let x = OptionalInt::Value(5);
+//     // match x {
+//     //     // 这里是 match 的 if guard 表达式，我们将在以后的章节进行详细介绍
+//     //     OptionalInt::Value(i) if i > 5 => println!("Got an int bigger than five!"),
+//     //     OptionalInt::Value(..) => println!("Got an int!"),
+//     //     OptionalInt::Missing => println!("No such luck."),
+//     // }
+
+//     let number = Some(7);
+//     let mut optional = Some(0);
+
+//     // If `let` destructures `number` into `Some(i)`, evaluate the block.
+//     if let Some(i) = number {
+//         println!("Matched {:?}!", i);
+//     } else {
+//         println!("Didn't match a number!");
+//     }
+
+//     // While `let` destructures `optional` into `Some(i)`, evaluate the block.
+//     while let Some(i) = optional {
+//         if i > 9 {
+//             println!("Greater than 9, quit!");
+//             optional = None;
+//         } else {
+//             println!("`i` is `{:?}`. Try again.", i);
+//             optional = Some(i + 1);
+//         }
+//     }
+// }
+
+// struct Circle {
+//     x: f64,
+//     y: f64,
+//     radius: f64,
+// }
+// impl Circle {
+//     fn new(x: f64, y: f64, radius: f64) -> Circle {
+//         Circle {
+//             x: x,
+//             y: y,
+//             radius: radius,
+//         }
+//     }
+//     fn area(&self) -> f64 {
+//         std::f64::consts::PI * (self.radius * self.radius)
+//     }}
+// fn main() {
+//     let c = Circle {
+//         x: 0.0,
+//         y: 0.0,
+//         radius: 2.0,
+//     };
+//     println!("{}", c.area());
+//     // use associated function and method chaining
+//     println!("{}", Circle::new(0.0, 0.0, 2.0).area());
+// }
+
+// fn main() {
+//     struct D {};
+// }
