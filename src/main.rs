@@ -797,3 +797,75 @@
 // fn main() {
 //     struct D {};
 // }
+
+// struct Person {
+//     name: String,
+// }
+
+// impl Person {
+//     fn new(n: &str) -> Person {
+//         Person {
+//             name: n.to_string(),
+//         }
+//     }
+
+//     fn greeting(&self) {
+//         println!("{} say hello .", self.name);
+//     }
+// }
+
+// fn main() {
+//     let peter = Person::new("Peter");
+//     peter.greeting();
+// }
+
+// fn main() {
+//     // let y = "Hello";
+//     // let x: &'static str = "Hello";
+//     // println!("{}", x == y)
+
+//     // //没有转义序列
+//     // let d: &'static str = r"abc \n abc";
+//     // //等价于
+//     // let c: &'static str = "abc \\n abc";
+//     // println!("{}{}", c, d)
+
+//     // let x: &'static str = "hello";
+
+//     // let mut y: String = x.to_string();
+//     // println!("{}", y);
+//     // y.push_str(", world");
+//     // println!("{}", y);
+
+//     let x = "哎哟我去".to_string();
+//     for i in x.as_bytes() {
+//         print!("{} ", i);
+//     }
+
+//     println!("");
+
+//     for i in x.chars() {
+//         print!("{}", i);
+//     }
+
+//     x.chars().nth(2);
+// }
+
+// fn main() {
+//     let xm = "xiaoming";
+//     let xh = "xiaohong";
+//     say_what(xm, hi);
+//     say_what(xh, hello);
+// }
+
+// fn hi(name: &str) {
+//     println!("Hi, {}.", name);
+// }
+
+// fn hello(name: &str) {
+//     println!("Hello, {}.", name);
+// }
+
+// fn say_what(name: &str, func: fn(&str)) {
+//     func(name)
+// }
